@@ -1,0 +1,21 @@
+{
+  "method": "Built-in image_gen tool",
+  "assets": [
+    {
+      "file": "hero.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: widescreen website hero photograph. A very charming real shaggy gray donkey standing in a sunlit Italian countryside meadow, facing camera in three quarter view, its full head and long ears clearly visible on the RIGHT THIRD of composition. Olive hills, grasses and a winding dirt path stretching to the left, delicate small wildflowers, subtle warm golden morning light, faded distant rolling mountains. Large open landscape negative space in left half. Premium travel editorial photography, natural muted sage, warm sand and soft cream tones, tactile analog film grain, realistic animal anatomy, cinematic wide composition 16:9. No people, no tack, no saddle, no text, no logos."
+    },
+    {
+      "file": "milo.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: donkey rental listing photo, landscape 4:3. An adorable fluffy gray donkey with a white muzzle and dark mane, close portrait from chest up, ears fully visible, looking directly at camera in a verdant meadow, sunlit green hills softly blurred behind. Premium countryside editorial photography, warm film tones, natural light, fine tactile fur detail. No people, no text, no watermark."
+    },
+    {
+      "file": "olive.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: donkey rental listing photo, landscape 4:3. A friendly chestnut brown donkey with a cream muzzle and tall ears, close portrait from chest up, ears fully visible, looking slightly left at camera, golden grasses and soft olive trees in a rolling countryside behind. Premium countryside editorial photography, golden afternoon light, muted warm film tones, realistic animal anatomy. No people, no text, no watermark."
+    },
+    {
+      "file": "pip.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: donkey rental listing photo, landscape 4:3. A lovely small creamy white donkey with fluffy fur and pinkish muzzle, close portrait from chest up, tall ears fully visible, turned three quarters toward camera, in a soft green meadow with distant rolling hills and rustic wood fence. Premium countryside editorial photography, soft morning sunshine, muted warm film tones, realistic animal anatomy. No people, no text, no watermark."
+    }
+  ]
+}

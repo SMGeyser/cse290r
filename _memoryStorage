@@ -1,0 +1,394 @@
+{
+  "version": 1,
+  "root": "C:\\Users\\samge\\school\\homework_f26\\cse290r",
+  "updated_at": "2026-10-07T01:54:20+00:00",
+  "files": {
+    "ai.py": {
+      "checked_at": "2026-10-07T01:54:19+00:00",
+      "sha256": "61e5e8d9a40dafa4767aea211ad519ad4c9ec0b35f5de6ed46532656b68dcf0c",
+      "status": "python-ast"
+    },
+    "qwen.py": {
+      "checked_at": "2026-10-07T01:54:19+00:00",
+      "sha256": "efcb917f617fb1b038a7891c28820841ee5f29449427e5a7873d4ab7d029b988",
+      "status": "python-ast"
+    },
+    "qwen_client.py": {
+      "checked_at": "2026-10-07T01:54:19+00:00",
+      "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d",
+      "status": "python-ast"
+    }
+  },
+  "coverage": {
+    "scanned_at": "2026-10-07T01:54:19+00:00",
+    "include": [
+      "ai.py",
+      "qwen.py",
+      "qwen_client.py"
+    ],
+    "exclude": [
+      "canvas-lms",
+      "study-agent",
+      "resume-builder",
+      "codebase-memory"
+    ],
+    "default_excluded_directories": [
+      ".aws",
+      ".cache",
+      ".git",
+      ".pytest_cache",
+      ".ssh",
+      ".venv",
+      "__pycache__",
+      "build",
+      "coverage",
+      "dist",
+      "node_modules",
+      "output",
+      "tmp",
+      "vendor",
+      "venv"
+    ],
+    "default_excluded_files": [
+      ".env",
+      ".env.*",
+      "*.pem",
+      "*.key",
+      "*.p12",
+      "*.pfx",
+      "id_rsa*",
+      "id_ed25519*",
+      "*credentials*",
+      "*secrets*",
+      "*.lock",
+      "package-lock.json",
+      "yarn.lock",
+      "pnpm-lock.yaml",
+      "_memoryStorage*",
+      "*.memory-tmp"
+    ],
+    "ignore_engine": "rg-ignore-files",
+    "counts": {
+      "excluded": 1,
+      "outside_scope": 3,
+      "python-ast": 3
+    },
+    "selected_files": 3,
+    "max_bytes": 1048576,
+    "scope": "partial"
+  },
+  "entries": {
+    "87c68301e2f402aaf82c": {
+      "id": "87c68301e2f402aaf82c",
+      "kind": "architecture",
+      "symbol": "top-level AI examples",
+      "summary": "The top-level Python files demonstrate three ways to call OpenRouter: qwen_client.py is a reusable standard-library CLI, qwen.py is a requests-based two-turn reasoning example, and ai.py uses the OpenRouter SDK with dotenv and course context. This memory covers those three files; it does not describe the nested Canvas LMS checkout.",
+      "evidence": "observed",
+      "tags": [
+        "architecture",
+        "openrouter",
+        "entrypoints"
+      ],
+      "relationships": [
+        "The scripts each issue their own requests; they do not import one another."
+      ],
+      "sources": [
+        {
+          "path": "qwen_client.py",
+          "start_line": 105,
+          "end_line": 137,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        },
+        {
+          "path": "qwen.py",
+          "start_line": 1,
+          "end_line": 46,
+          "sha256": "efcb917f617fb1b038a7891c28820841ee5f29449427e5a7873d4ab7d029b988"
+        },
+        {
+          "path": "ai.py",
+          "start_line": 1,
+          "end_line": 27,
+          "sha256": "61e5e8d9a40dafa4767aea211ad519ad4c9ec0b35f5de6ed46532656b68dcf0c"
+        }
+      ],
+      "updated_at": "2026-10-07T01:54:20+00:00"
+    },
+    "b1f85f2f119620b886c6": {
+      "id": "b1f85f2f119620b886c6",
+      "kind": "function",
+      "symbol": "qwen_client.parse_args",
+      "summary": "Defines an optional positional prompt plus system-message, token-limit, temperature, and no-stream options. Streaming is the default; omitting the prompt lets get_prompt read stdin.",
+      "evidence": "observed",
+      "tags": [
+        "cli",
+        "options",
+        "streaming"
+      ],
+      "relationships": [],
+      "sources": [
+        {
+          "path": "qwen_client.py",
+          "start_line": 25,
+          "end_line": 44,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        }
+      ],
+      "updated_at": "2026-10-07T01:54:20+00:00"
+    },
+    "032e41f763dffee08c6b": {
+      "id": "032e41f763dffee08c6b",
+      "kind": "function",
+      "symbol": "qwen_client.get_prompt",
+      "summary": "Uses the supplied prompt or reads stdin, trims whitespace, and rejects an empty prompt with ValueError before a request is sent.",
+      "evidence": "observed",
+      "tags": [
+        "cli",
+        "stdin",
+        "validation"
+      ],
+      "relationships": [
+        "main calls get_prompt inside its request/error-handling block."
+      ],
+      "sources": [
+        {
+          "path": "qwen_client.py",
+          "start_line": 39,
+          "end_line": 44,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        },
+        {
+          "path": "qwen_client.py",
+          "start_line": 112,
+          "end_line": 116,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        }
+      ],
+      "updated_at": "2026-10-07T01:54:20+00:00"
+    },
+    "e5b45c2769fa8b500006": {
+      "id": "e5b45c2769fa8b500006",
+      "kind": "function",
+      "symbol": "qwen_client.build_payload",
+      "summary": "Builds chat messages with optional system text followed by the user prompt. Adds MODEL and the stream flag, then includes max_tokens and temperature only when supplied.",
+      "evidence": "observed",
+      "tags": [
+        "request",
+        "payload",
+        "configuration"
+      ],
+      "relationships": [
+        "main serializes build_payload's result as UTF-8 JSON in the HTTP POST body."
+      ],
+      "sources": [
+        {
+          "path": "qwen_client.py",
+          "start_line": 47,
+          "end_line": 62,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        },
+        {
+          "path": "qwen_client.py",
+          "start_line": 112,
+          "end_line": 124,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        }
+      ],
+      "updated_at": "2026-10-07T01:54:20+00:00"
+    },
+    "da7b8efeb7834b91765c": {
+      "id": "da7b8efeb7834b91765c",
+      "kind": "function",
+      "symbol": "qwen_client.print_streaming",
+      "summary": "Reads server-sent event lines, ignores non-data and empty lines, stops at the DONE marker, parses JSON chunks, and flushes the first choice's delta content as it arrives. Missing choices or empty content are skipped; a final newline is printed.",
+      "evidence": "observed",
+      "tags": [
+        "response",
+        "streaming",
+        "sse"
+      ],
+      "relationships": [
+        "main selects this function unless --no-stream is set."
+      ],
+      "sources": [
+        {
+          "path": "qwen_client.py",
+          "start_line": 87,
+          "end_line": 102,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        },
+        {
+          "path": "qwen_client.py",
+          "start_line": 125,
+          "end_line": 129,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        }
+      ],
+      "updated_at": "2026-10-07T01:54:20+00:00"
+    },
+    "7cf18d4a57b906a4215a": {
+      "id": "7cf18d4a57b906a4215a",
+      "kind": "function",
+      "symbol": "qwen_client.print_non_streaming",
+      "summary": "Reads the complete JSON response and prints the first choice's message content. Unexpected response shape is converted to RuntimeError and handled by main.",
+      "evidence": "observed",
+      "tags": [
+        "response",
+        "no-stream",
+        "errors"
+      ],
+      "relationships": [],
+      "sources": [
+        {
+          "path": "qwen_client.py",
+          "start_line": 79,
+          "end_line": 84,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        },
+        {
+          "path": "qwen_client.py",
+          "start_line": 125,
+          "end_line": 132,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        }
+      ],
+      "updated_at": "2026-10-07T01:54:20+00:00"
+    },
+    "b570e5ab7423c82c30eb": {
+      "id": "b570e5ab7423c82c30eb",
+      "kind": "flow",
+      "symbol": "qwen_client.main",
+      "summary": "Parses CLI arguments, requires OPENROUTER_API_KEY from the process environment, validates the prompt, builds an authenticated JSON POST, and opens the response with a 120-second timeout. Dispatches to streaming or full-response printing. Handled request/JSON/prompt errors return exit code 1; success returns 0. The __main__ guard invokes it.",
+      "evidence": "observed",
+      "tags": [
+        "entrypoint",
+        "authentication",
+        "request",
+        "errors"
+      ],
+      "relationships": [
+        "main uses parse_args, get_prompt, build_payload, print_streaming, print_non_streaming, and print_error."
+      ],
+      "sources": [
+        {
+          "path": "qwen_client.py",
+          "start_line": 105,
+          "end_line": 137,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        }
+      ],
+      "updated_at": "2026-10-07T01:54:20+00:00"
+    },
+    "4438140543aef1fa2c2a": {
+      "id": "4438140543aef1fa2c2a",
+      "kind": "config",
+      "symbol": "qwen_client.API_URL and MODEL",
+      "summary": "API_URL selects the OpenRouter chat-completions endpoint, and MODEL selects the Qwen model identifier in each payload. Both are module constants rather than CLI options. This records their roles, not a claim that the remote model is currently available.",
+      "evidence": "observed",
+      "tags": [
+        "configuration",
+        "endpoint",
+        "model"
+      ],
+      "relationships": [],
+      "sources": [
+        {
+          "path": "qwen_client.py",
+          "start_line": 21,
+          "end_line": 22,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        },
+        {
+          "path": "qwen_client.py",
+          "start_line": 53,
+          "end_line": 57,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        },
+        {
+          "path": "qwen_client.py",
+          "start_line": 114,
+          "end_line": 116,
+          "sha256": "429b975b7586534c723abcdd190d6ddc79e63dac554a3c017e5b10ab368ab62d"
+        }
+      ],
+      "updated_at": "2026-10-07T01:54:20+00:00"
+    },
+    "4be3af731046a89e0521": {
+      "id": "4be3af731046a89e0521",
+      "kind": "flow",
+      "symbol": "qwen.two_turn_reasoning",
+      "summary": "Sends an initial requests-based chat with reasoning enabled, reads the first assistant message, preserves its reasoning_details in a follow-up conversation, and sends a second request. The first request uses a placeholder authorization header; the second request supplies no headers in the source. Both calls run at module top level.",
+      "evidence": "observed",
+      "tags": [
+        "reasoning",
+        "conversation",
+        "requests",
+        "example"
+      ],
+      "relationships": [
+        "The follow-up messages reuse the first response's content and reasoning_details."
+      ],
+      "sources": [
+        {
+          "path": "qwen.py",
+          "start_line": 5,
+          "end_line": 46,
+          "sha256": "efcb917f617fb1b038a7891c28820841ee5f29449427e5a7873d4ab7d029b988"
+        }
+      ],
+      "updated_at": "2026-10-07T01:54:20+00:00"
+    },
+    "c10f9d28a6dda408a4ac": {
+      "id": "c10f9d28a6dda408a4ac",
+      "kind": "function",
+      "symbol": "ai.getCourseInfo",
+      "summary": "Returns a fixed course description. The SDK example inserts that description into its system-message context before sending the chat request.",
+      "evidence": "observed",
+      "tags": [
+        "course",
+        "context",
+        "sdk"
+      ],
+      "relationships": [],
+      "sources": [
+        {
+          "path": "ai.py",
+          "start_line": 7,
+          "end_line": 12,
+          "sha256": "61e5e8d9a40dafa4767aea211ad519ad4c9ec0b35f5de6ed46532656b68dcf0c"
+        },
+        {
+          "path": "ai.py",
+          "start_line": 14,
+          "end_line": 25,
+          "sha256": "61e5e8d9a40dafa4767aea211ad519ad4c9ec0b35f5de6ed46532656b68dcf0c"
+        }
+      ],
+      "updated_at": "2026-10-07T01:54:20+00:00"
+    },
+    "ecc908857cf7bc9bb1d5": {
+      "id": "ecc908857cf7bc9bb1d5",
+      "kind": "flow",
+      "symbol": "ai.sdk_example",
+      "summary": "Loads environment configuration with dotenv, constructs an OpenRouter SDK client from OPENROUTER_API_KEY, sends course context in a red/blue-team practice conversation, and prints the first response's message content. The client call runs at module top level. The simulation's secret value is intentionally omitted from memory.",
+      "evidence": "observed",
+      "tags": [
+        "sdk",
+        "dotenv",
+        "entrypoint",
+        "example"
+      ],
+      "relationships": [],
+      "sources": [
+        {
+          "path": "ai.py",
+          "start_line": 1,
+          "end_line": 27,
+          "sha256": "61e5e8d9a40dafa4767aea211ad519ad4c9ec0b35f5de6ed46532656b68dcf0c"
+        }
+      ],
+      "updated_at": "2026-10-07T01:54:20+00:00"
+    }
+  },
+  "removed": {}
+}

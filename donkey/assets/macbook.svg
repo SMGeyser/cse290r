@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="460" viewBox="0 0 1000 460">
+<defs>
+<linearGradient id="m" x2="0" y2="1"><stop stop-color="#dbe9f2"/><stop offset=".5" stop-color="#a1b8cd"/><stop offset="1" stop-color="#829fb7"/></linearGradient>
+<linearGradient id="s" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#031528"/><stop offset=".6" stop-color="#144573"/><stop offset="1" stop-color="#6ba8da"/></linearGradient>
+<linearGradient id="flow" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#1d4270"/><stop offset=".43" stop-color="#54a4e6"/><stop offset=".65" stop-color="#c5e8ff"/><stop offset=".79" stop-color="#72b5e6"/><stop offset="1" stop-color="#204b86"/></linearGradient>
+<linearGradient id="base" x2="0" y2="1"><stop stop-color="#d8e6ef"/><stop offset=".5" stop-color="#a7c0d3"/><stop offset="1" stop-color="#778d9e"/></linearGradient>
+<clipPath id="screen"><rect x="188" y="44" width="624" height="326" rx="8"/></clipPath>
+<filter id="sh" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="9"/></filter>
+</defs>
+<ellipse cx="500" cy="408" rx="339" ry="11" fill="#66849a" opacity=".22" filter="url(#sh)"/>
+<rect x="176" y="32" width="648" height="354" rx="17" fill="url(#m)" stroke="#9bb0c1"/>
+<rect x="182" y="38" width="636" height="337" rx="12" fill="#151c22"/>
+<g clip-path="url(#screen)">
+<rect x="188" y="44" width="624" height="326" fill="url(#s)"/>
+<path d="M136 422C234 77 379 410 519 95S734 175 856-21" fill="none" stroke="#072645" stroke-width="128"/>
+<path d="M136 416C234 71 379 404 519 89S734 169 856-27" fill="none" stroke="url(#flow)" stroke-width="98"/>
+<path d="M144 410C242 65 387 398 527 83S742 163 864-33" fill="none" stroke="#c9e9ff" stroke-opacity=".6" stroke-width="2"/>
+<path d="M335 422C479 248 556 434 678 234S768 322 895 125" fill="none" stroke="url(#flow)" stroke-width="83"/>
+<path d="M329 382C473 208 550 394 672 194S762 282 889 85" fill="none" stroke="#bde7ff" stroke-opacity=".5" stroke-width="1.5"/>
+</g>
+<path d="M468 44h64v8a5 5 0 0 1-5 5h-54a5 5 0 0 1-5-5Z" fill="#151c22"/><circle cx="500" cy="49" r="2" fill="#2c3c49"/>
+<path d="M109 382h782l-13 16c-4 5-17 9-30 9H152c-13 0-26-4-30-9Z" fill="url(#base)" stroke="#a4b9c9"/>
+<path d="M448 382h104l-3 5a9 9 0 0 1-8 3h-82a9 9 0 0 1-8-3Z" fill="#819cb1"/>
+<path d="M136 400h728" stroke="#d2e0e9" stroke-width="1"/>
+</svg>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f8f9ff" />
+<title>AuraWave — Moodflow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-shell">
+<header class="topbar">
+<button class="brand" data-view="moods" aria-label="Go to moods"><span class="brand-mark"><span>∞</span></span><span>AURAWAVE</span></button>
+<div class="top-actions"><button class="vision-toggle" id="visionToggle" aria-label="Toggle vision mode"><span class="sun">☼</span><span id="visionLabel">DAY</span></button><button class="avatar" aria-label="Open profile">SG</button></div>
+</header>
+<main id="app" class="main"></main>
+<nav class="bottom-nav" aria-label="Primary navigation"><button data-view="deck"><span class="nav-icon">◉</span><span>Shuffle Deck</span></button><button data-view="moods" class="active"><span class="nav-icon">✣</span><span>Moods</span></button><button data-view="queue"><span class="nav-icon">♫</span><span>Queue</span></button><button data-view="stats"><span class="nav-icon">◷</span><span>Run Stats</span></button></nav>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

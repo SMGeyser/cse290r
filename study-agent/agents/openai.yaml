@@ -1,0 +1,4 @@
+interface:
+  display_name: "Study Agent"
+  short_description: "Build weekly study plans from Canvas LMS coursework"
+  default_prompt: "Use $study-agent to pull my Canvas coursework and make this week's study plan."

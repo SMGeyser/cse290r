@@ -1,0 +1,30 @@
+{
+  "method": "Built-in image_gen",
+  "optimizedFormat": "WebP, quality 88, preserved alpha",
+  "prompts": [
+    {
+      "name": "macbook-real",
+      "output": "assets/macbook-real.webp",
+      "source": "assets/macbook-real.png",
+      "prompt": "Use case: product-mockup. Asset type: premium technology website product cutout. Primary request: A single extremely thin sky-blue aluminum laptop, open at 100 degrees, three-quarter view from slightly above, full device visible including keyboard, trackpad, polished chamfered edges, subtle speaker and key details. The display shows fluid blue satin abstract wallpaper, no text, no icons. Style: photorealistic premium studio product photography, physically accurate materials, fine surface texture, sharp optical glass reflections, natural subtle imperfections, no cartoon illustration. Lighting: broad softbox key light with controlled studio rim highlights, dimensional depth, restrained luxury advertising aesthetic. Composition: centered isolated object, entire silhouette visible, generous clean margin, landscape canvas. Background: genuinely transparent alpha; no floor, no background, no shadow baked outside the object, no text, no watermark."
+    },
+    {
+      "name": "watch-real",
+      "output": "assets/watch-real.webp",
+      "source": "assets/watch-real.png",
+      "prompt": "Use case: product-mockup. Asset type: premium technology website product cutout. Primary request: A single refined silver rectangular smartwatch with softly rounded corners, a warm stone silicone strap with realistic buckle and holes, angled three-quarter view, full watch and elegantly curved strap visible. Dark analog clock face with minimal cream indices and slender gold hands, no text. Style: photorealistic premium studio product photography, physically accurate materials, fine surface texture, sharp optical glass reflections, natural subtle imperfections, no cartoon illustration. Lighting: broad softbox key light with controlled studio rim highlights, dimensional depth, restrained luxury advertising aesthetic. Composition: centered isolated object, entire silhouette visible, generous clean margin, landscape canvas. Background: genuinely transparent alpha; no floor, no background, no shadow baked outside the object, no text, no watermark."
+    },
+    {
+      "name": "tablet-real",
+      "output": "assets/tablet-real.webp",
+      "source": "assets/tablet-real.png",
+      "prompt": "Use case: product-mockup. Asset type: premium technology website product cutout. Primary request: A single extremely thin graphite aluminum tablet in landscape orientation floating at a three-quarter angle, full device visible with finely detailed edge, very thin bezels, luminous lavender satin abstract wallpaper, no text or icons. Style: photorealistic premium studio product photography, physically accurate materials, fine surface texture, sharp optical glass reflections, natural subtle imperfections, no cartoon illustration. Lighting: broad softbox key light with controlled studio rim highlights, dimensional depth, restrained luxury advertising aesthetic. Composition: centered isolated object, entire silhouette visible, generous clean margin, landscape canvas. Background: genuinely transparent alpha; no floor, no background, no shadow baked outside the object, no text, no watermark."
+    },
+    {
+      "name": "phone-real",
+      "output": "assets/phone-real.webp",
+      "source": "assets/phone-real.png",
+      "prompt": "Use case: product-mockup. Asset type: premium technology website product cutout. Primary request: A single premium modern copper-colored smartphone, three-quarter rear view in portrait orientation, full device visible. Three physically realistic large black optical camera lenses in a raised square camera module at the upper left, matte copper glass back, finely machined rounded titanium rails, antenna seams and side buttons, no logos. Style: photorealistic premium studio product photography, physically accurate materials, fine surface texture, sharp optical glass reflections, natural subtle imperfections, no cartoon illustration. Lighting: broad softbox key light with controlled studio rim highlights, dimensional depth, restrained luxury advertising aesthetic. Composition: centered isolated object, entire silhouette visible, generous clean margin, landscape canvas. Background: genuinely transparent alpha; no floor, no background, no shadow baked outside the object, no text, no watermark."
+    }
+  ]
+}

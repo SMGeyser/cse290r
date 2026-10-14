@@ -1,0 +1,14 @@
+{
+  "name": "lumina-product-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A refined, responsive technology product showcase.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check app.js && node --check server.js && node --check phone-scene.js"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  }
+}

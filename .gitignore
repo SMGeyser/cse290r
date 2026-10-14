@@ -1,0 +1,16 @@
+# Secrets and local environments
+.env
+.env.*
+**/.env
+**/.env.*
+.venv/
+**/.venv/
+
+# Excluded nested repository
+canvas-lms/
+
+# Python and local build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+

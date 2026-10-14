@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codebase Memory"
+  short_description: "Build and maintain searchable codebase memory"
+  default_prompt: "Use $codebase-memory to collect, search, and update essential project knowledge in _memoryStorage."

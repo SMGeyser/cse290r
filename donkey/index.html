@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafc">
+  <meta name="description" content="Discover Lumina. Thoughtfully designed phones, computers, and wearables.">
+  <title>Lumina — Beautifully capable.</title>
+  <link rel="icon" href="assets/lumina.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+  <script type="module" src="phone-scene.js"></script>
+  <noscript><style>.hero-phone.has-3d{height:var(--hero-stage-height)}.scroll-hint{visibility:hidden}</style></noscript>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-mark" viewBox="0 0 24 24"><path d="M12 2.5 15.2 8.8 21.5 12l-6.3 3.2L12 21.5l-3.2-6.3L2.5 12l6.3-3.2Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="14" rx="3"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="global-nav">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Lumina home"><svg class="icon"><use href="#i-mark"/></svg><span>Lumina</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="#products">Store</a><a href="#air">Mac</a><a href="#phone">Phone</a><a href="#tablet">Tablet</a><a href="#watch">Watch</a><a href="#compare">Explore</a><a href="#support">Support</a>
+      </div>
+      <div class="nav-tools">
+        <button class="icon-button" id="open-search" aria-label="Search products"><svg class="icon"><use href="#i-search"/></svg></button>
+        <button class="icon-button bag-button" id="open-bag" aria-label="Shopping bag, 0 items"><svg class="icon"><use href="#i-bag"/></svg><span id="bag-count" hidden>0</span></button>
+        <button class="icon-button menu-button" id="menu-toggle" aria-label="Open navigation" aria-controls="nav-links" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+      </div>
+    </nav>
+  </header>
+  <div class="announcement" id="top"><p>Something extraordinary. For your everyday.</p><a href="#products">Explore the collection <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+  <main id="main">
+    <section class="hero hero-phone has-3d" id="phone" aria-labelledby="phone-title">
+      <div class="phone-sticky">
+      <div class="hero-copy"><p class="eyebrow">INTRODUCING</p><h1 id="phone-title">Phone 17 Pro.</h1><p class="hero-sub">A little more extraordinary.</p>
+        <div class="actions"><button class="button button-primary" data-details="phone">Explore Phone Pro</button><button class="button button-outline" data-add="phone">Buy <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+      </div>
+      <figure class="phone-view" id="phone-view" role="img" aria-label="A copper Phone Pro with realistic metal, glass, and cameras, rotating a full turn as you scroll.">
+        <img class="phone-fallback" src="assets/phone-real.webp" alt="" width="1536" height="1024" fetchpriority="high">
+        <canvas id="phone-canvas" aria-hidden="true"></canvas>
+      </figure>
+      <div class="phone-caption"><span class="finish-label"><i></i> Copper. Beautiful from every angle.</span><span class="scroll-hint">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
+      <div class="rotation-track" aria-hidden="true"><span id="rotation-progress"></span></div>
+      </div>
+    </section>
+    <section class="hero hero-air" id="air" aria-labelledby="air-title">
+      <div class="hero-copy"><p class="eyebrow">LIGHT ON WEIGHT. BIG ON POSSIBILITY.</p><h2 id="air-title">MacBook Air.</h2><p class="hero-sub">Your ideas. Without limits.</p>
+        <div class="actions"><button class="button button-primary" data-details="mac">Meet MacBook Air</button><button class="button button-outline" data-add="mac">Buy <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+      </div>
+      <figure class="air-art"><img src="assets/macbook-real.webp" alt="Realistic sky-blue aluminum laptop with a detailed keyboard and flowing blue display" width="1536" height="1024" loading="lazy"></figure>
+      <p class="color-caption"><span></span> A breath of fresh blue.</p>
+    </section>
+    <section class="product-grid" id="products" aria-label="Discover more products">
+      <article class="product-card card-watch" id="watch"><div class="card-copy"><p class="eyebrow">A BETTER DAY STARTS HERE</p><h2>Watch Series 11.</h2><p>More in tune with you.</p><div class="actions"><button class="text-link" data-details="watch">Explore Watch <svg class="icon"><use href="#i-arrow"/></svg></button><button class="text-link" data-add="watch">Buy <svg class="icon"><use href="#i-arrow"/></svg></button></div></div><img class="watch-art" src="assets/watch-real.webp" alt="Realistic polished silver watch with a stone-colored band, buckle, and dark analog face" width="1536" height="1024" loading="lazy"></article>
+      <article class="product-card card-tablet" id="tablet"><div class="card-copy"><p class="eyebrow">A CANVAS FOR EVERYTHING</p><h2>Tablet Pro.</h2><p>Make room for your imagination.</p><div class="actions"><button class="text-link" data-details="tablet">Explore Tablet <svg class="icon"><use href="#i-arrow"/></svg></button><button class="text-link" data-add="tablet">Buy <svg class="icon"><use href="#i-arrow"/></svg></button></div></div><img class="tablet-art" src="assets/tablet-real.webp" alt="Realistic thin graphite tablet with glass reflections and flowing lavender artwork" width="1536" height="1024" loading="lazy"></article>
+    </section>
+    <section class="explore-section" id="compare" aria-labelledby="explore-title">
+      <div class="section-heading"><div><p class="eyebrow">FIND YOUR EVERYDAY EXTRAORDINARY</p><h2 id="explore-title">Made for your world.</h2></div><p>Big ideas. Small moments.<br>And everything in between.</p></div>
+      <div class="explore-grid"><a class="explore-card" href="#phone"><span class="category-label">01 / STAY CONNECTED</span><h3>Closer to<br>what matters.</h3><p>Discover Phone</p><span class="circle-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span></a><a class="explore-card" href="#air"><span class="category-label">02 / GO FURTHER</span><h3>A space for<br>your next idea.</h3><p>Discover Mac</p><span class="circle-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span></a><a class="explore-card" href="#tablet"><span class="category-label">03 / MAKE SOMETHING</span><h3>Let your<br>imagination lead.</h3><p>Discover Tablet</p><span class="circle-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span></a></div>
+    </section>
+    <section class="support-section" id="support" aria-labelledby="support-title"><div><p class="eyebrow">A LITTLE GUIDANCE GOES A LONG WAY</p><h2 id="support-title">Find your perfect fit.</h2><p>Explore the collection and find the device<br class="desktop-break"> that fits the way you live, work, and create.</p></div><button class="button button-dark" id="help-choose">Help me choose <svg class="icon"><use href="#i-arrow"/></svg></button></section>
+  </main>
+  <footer><div class="footer-inner"><a class="brand" href="#top"><svg class="icon"><use href="#i-mark"/></svg><span>Lumina</span></a><p>Thoughtfully designed. Beautifully capable.</p><p class="copyright">© 2026 Lumina. Product design concept.</p><a class="back-top" href="#top">Back to top ↑</a></div></footer>
+  <dialog class="panel" id="search-dialog" aria-labelledby="search-title"><button class="icon-button panel-close" data-close aria-label="Close search"><svg class="icon"><use href="#i-close"/></svg></button><p class="eyebrow">THE COLLECTION</p><h2 id="search-title">What inspires you?</h2><label class="visually-hidden" for="product-search">Search products</label><input id="product-search" type="search" placeholder="Search Phone, Mac, Watch, Tablet…" autocomplete="off"><div id="search-results" class="search-results" aria-live="polite"></div></dialog>
+  <dialog class="panel" id="bag-dialog" aria-labelledby="bag-title"><button class="icon-button panel-close" data-close aria-label="Close shopping bag"><svg class="icon"><use href="#i-close"/></svg></button><p class="eyebrow">YOUR COLLECTION</p><h2 id="bag-title">Your bag.</h2><div id="bag-items"></div><p class="panel-note">Your selections are saved for this visit.</p></dialog>
+  <dialog class="panel" id="detail-dialog" aria-labelledby="detail-title"><button class="icon-button panel-close" data-close aria-label="Close product details"><svg class="icon"><use href="#i-close"/></svg></button><div id="detail-content"></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>
